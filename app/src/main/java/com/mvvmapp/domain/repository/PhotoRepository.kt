@@ -7,7 +7,7 @@ interface PhotoRepository {
 
     fun getPhotos(albumId: Long?): Single<List<Photo>>
 
-    fun gtePhotoDetails(photoId: Long?): Single<Photo>
+    fun getPhotoDetails(photoId: Long?): Single<Photo>
 
     fun deletePhoto(photo: Photo)
 
