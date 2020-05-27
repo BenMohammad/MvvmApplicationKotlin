@@ -1,6 +1,5 @@
 package com.mvvmapp.presentation.photo
 
-import android.provider.ContactsContract
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mvvmapp.domain.model.Photo
@@ -17,7 +16,7 @@ class PhotosViewModel @Inject constructor(private val getPhotosUseCase: GetPhoto
         isLoad.value = false
     }
 
-    fun loadPhotos(id: Long) {
+    fun loadPhotos(id: Long?) {
         if(id == null) return
         getPhotosUseCase.saveAlbum(id)
         getPhotosUseCase.execute(
