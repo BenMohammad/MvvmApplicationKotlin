@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Gallery
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,8 +13,6 @@ import androidx.lifecycle.ViewModelProviders
 import com.mvvmapp.R
 import com.mvvmapp.databinding.FragmentAlbumsBinding
 import com.mvvmapp.domain.model.Album
-import com.mvvmapp.presentation.ViewModelFactory
-import com.mvvmapp.presentation.gallery.GalleryActivity
 import com.mvvmapp.presentation.gallery.OnGalleryCallback
 import dagger.android.support.DaggerFragment
 import java.lang.ClassCastException

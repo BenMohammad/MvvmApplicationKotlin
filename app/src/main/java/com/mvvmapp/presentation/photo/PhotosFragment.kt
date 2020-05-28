@@ -41,6 +41,7 @@ class PhotosFragment : DaggerFragment(), OnPhotosAdapterListener {
         val albumId = arguments?.let {
             it.getLong(KEY_ALBUM_ID)
         }
+        viewModel.loadPhotos(albumId)
     }
 
     override fun onCreateView(

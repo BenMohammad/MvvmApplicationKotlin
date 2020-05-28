@@ -49,6 +49,6 @@ internal class AlbumsAdapter(val mListener: OnAlbumsAdapterListener) : RecyclerV
             itemView.setOnClickListener {
                 mListener.showPhotos(album)
             }
-
-        }    }
+        }
+    }
 }

@@ -3,7 +3,6 @@ package com.mvvmapp.presentation.gallery
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.security.keystore.KeyNotYetValidException
 import android.widget.ImageView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.ViewCompat

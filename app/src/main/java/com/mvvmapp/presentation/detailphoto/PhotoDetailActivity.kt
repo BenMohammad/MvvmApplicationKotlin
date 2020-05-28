@@ -2,17 +2,15 @@ package com.mvvmapp.presentation.detailphoto
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.mvvmapp.R
 import com.mvvmapp.databinding.ActivityPhotoDetailBinding
 import com.mvvmapp.presentation.ViewModelFactory
 import com.mvvmapp.presentation.loadImageFull
 import dagger.android.support.DaggerAppCompatActivity
-import org.jetbrains.anko.act
+
 import javax.inject.Inject
 
 class PhotoDetailActivity: DaggerAppCompatActivity(), OnPhotoDetailCallback {
