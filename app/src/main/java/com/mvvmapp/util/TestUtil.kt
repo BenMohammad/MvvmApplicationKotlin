@@ -1,7 +1,5 @@
 package com.mvvmapp.util
 
-import androidx.lifecycle.MutableLiveData
-import com.mvvmapp.data.source.local.dao.PhotoDao
 import com.mvvmapp.domain.model.Photo
 
 object TestUtil {

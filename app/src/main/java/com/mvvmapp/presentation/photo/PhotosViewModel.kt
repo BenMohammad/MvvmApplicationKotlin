@@ -18,7 +18,7 @@ class PhotosViewModel @Inject constructor(private val getPhotosUseCase: GetPhoto
 
     fun loadPhotos(id: Long?) {
         if(id == null) return
-        getPhotosUseCase.saveAlbum(id)
+        getPhotosUseCase.saveAlbumId(id)
         getPhotosUseCase.execute(
             onSuccess = {
                 isLoad.value = true

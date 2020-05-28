@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
-import dagger.android.AndroidInjector
+import com.mvvmapp.di.component.DaggerApplicationComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
@@ -19,6 +19,11 @@ class MainApplication : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         MultiDex.install(this)
+        DaggerApplicationComponent
+            .builder()
+            .application(this)
+            .build()
+            .inject(this)
 
     }
 

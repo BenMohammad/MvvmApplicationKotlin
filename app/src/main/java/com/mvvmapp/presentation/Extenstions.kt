@@ -5,7 +5,6 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
-import java.lang.Exception
 
 fun ImageView.loadImageFull(url: String?) =
     Picasso.get().load(url).into(this)
@@ -15,11 +14,12 @@ fun ImageView.loadImage(url: String, progressBar: ProgressBar) =
         .load(url)
         .placeholder(android.R.color.white)
         .into(this, object : Callback {
-            override fun onSuccess() {
-                progressBar.visibility = View.GONE
+
+            override fun onError(e: java.lang.Exception?) {
+                e?.printStackTrace()
             }
 
-            override fun onError(e: Exception?) {
-                e?.printStackTrace()
+            override fun onSuccess() {
+                progressBar.visibility = View.GONE
             }
         })

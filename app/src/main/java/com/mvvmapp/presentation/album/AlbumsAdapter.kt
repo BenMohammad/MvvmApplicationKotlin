@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.mvvmapp.R
 import com.mvvmapp.databinding.HolderAlbumBinding
@@ -12,7 +11,7 @@ import com.mvvmapp.domain.model.Album
 
 internal class AlbumsAdapter(val mListener: OnAlbumsAdapterListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val TAG = AlbumsAdapter::class.java.simpleName
+    private val TAG = AlbumsAdapter::class.java.name
     private val albums: MutableList<Album> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

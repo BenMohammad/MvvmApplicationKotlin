@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.mvvmapp.R
 import com.mvvmapp.databinding.ActivityPhotoDetailBinding
-import com.mvvmapp.presentation.ViewModelFactory
 import com.mvvmapp.presentation.loadImageFull
 import dagger.android.support.DaggerAppCompatActivity
 
@@ -18,7 +18,7 @@ class PhotoDetailActivity: DaggerAppCompatActivity(), OnPhotoDetailCallback {
     private val TAG = PhotoDetailActivity::class.java.name
     private lateinit var activityPhotoDetailBinding: ActivityPhotoDetailBinding
     @Inject
-    lateinit var viewModelFactory: ViewModelFactory
+    lateinit var viewModelFactory: ViewModelProvider.Factory
     private val viewModel: PhotoDetailViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory).get(PhotoDetailViewModel::class.java)
     }
@@ -43,7 +43,7 @@ class PhotoDetailActivity: DaggerAppCompatActivity(), OnPhotoDetailCallback {
             }
         })
 
-        activityPhotoDetailBinding.detailAppBarLayout.setOnClickListener{
+        activityPhotoDetailBinding.detailFab.setOnClickListener{
             viewModel.updateFavoriteStatus()
         }
     }

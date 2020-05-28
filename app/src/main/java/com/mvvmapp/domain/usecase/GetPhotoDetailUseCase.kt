@@ -7,14 +7,14 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class GetPhotoDetailUseCase @Inject constructor(private val repository: PhotoRepository) : SingleUseCase<Photo>() {
-    private var photId: Long? = null
+    private var photoId: Long? = null
 
     fun savePhotoId(id: Long) {
-        photId = id
+        photoId = id
     }
 
     override fun buildUseCaseSingle(): Single<Photo> {
-        return repository.getPhotoDetails(photId)
+        return repository.getPhotoDetails(photoId)
     }
 
     fun deleteAsFavorite(photo: Photo) {

@@ -10,7 +10,7 @@ class GetPhotosUseCase @Inject constructor(private val repository: PhotoReposito
 
     private var albumId: Long? = null
 
-    fun saveAlbum(id: Long) {
+    fun saveAlbumId(id: Long) {
         albumId = id
     }
 
